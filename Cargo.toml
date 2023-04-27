@@ -1,0 +1,19 @@
+[package]
+name = "shitchord"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8.5"
+tokio = { version = "1", features = ["sync", "net", "rt", "macros", "fs"] }
+serde = { version = "1.0", features = ["derive"] }
+ciborium = "0.2.0"
+zstd = "0.12.3"
+
+[features]
+default = ["large_n"]
+small_n = []
+medium_n = []
+large_n = []
